@@ -59,7 +59,7 @@ search.addEventListener('click', ()=>{
                     image.src = '';
             }
 
-            temperature.innerHTML = `${parseInt(json.main.temp)}<span>c</span>`
+            temperature.innerHTML = `${parseInt(json.main.temp)} ºc`
             description.innerHTML = `${json.weather[0].description}`;
             humidity.innerHTML = `${json.main.humidity}%`;
             wind.innerHTML = `${parseInt(json.wind.speed)} Km/h`;

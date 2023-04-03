@@ -1,41 +1,49 @@
+
+/*general config*/
 *{
     margin: 0;
     padding: 0;
     border: 0;
     outline: none;
     box-sizing: border-box;
+    --pricipal-color: #06283d;
+    --light-color: #fff;
 }
 
 body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #06283d;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background: var(--pricipal-color);
 }
 
 .container{
-    position: relative;
-    width: 400px;
-    height: 105px;
-    background: #fff;
-    padding: 28px 32px;
-    overflow: hidden;
-    border-radius: 18px;
-    font-family: 'Roboto', sans-serif;
-    transition: 0.6s ease-out;
+position: relative;
+width: 400px;
+height: 105px;
+background: var(--light-color);
+padding: 28px 32px;
+overflow: hidden;
+border-radius: 18px;
+font-family: 'Roboto', sans-serif;
+transition: 0.6s ease-out;
 }
 
+
+
+/*search container*/
+
 .search-box{
-    width: 100%;
-    height: min-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+width: 100%;
+height: min-content;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 
 .search-box input{
-    color: #06283d;
+    color: var(--pricipal-color);
     width: 80%;
     font-size: 24px;
     font-weight: 500;
@@ -47,7 +55,7 @@ body{
 .search-box input::placeholder{
     font-size: 20px;
     font-weight: 500;
-    color: #06283d;
+    color: var(--pricipal-color);
     text-transform: capitalize;
 }
 
@@ -55,7 +63,7 @@ body{
     cursor: pointer;
     width: 50px;
     height: 50px;
-    color: #06283d;
+    color: var(--pricipal-color);
     background: #dff6ff;
     border-radius: 50%;
     font-size: 22px;
@@ -63,18 +71,24 @@ body{
 }
 
 .search-box button:hover{
-    color: #fff;
-    background: #06283d;
+    color: var(--light-color);
+    background: var(--pricipal-color);
 }
 
 .search-box i{
     position: absolute;
-    color: #06283d;
+    color: var(--pricipal-color);
     font-size: 28px;
 }
 
+
+
+
+
+/* weather desciption */
+
 .weather-box{
-    text-align: center;
+text-align: center;
 }
 
 .weather-box img{
@@ -84,7 +98,7 @@ body{
 
 .weather-box .temperature{
     position: relative;
-    color: #06283d;
+    color: var(--pricipal-color);
     font: 4rem;
     font-weight: 800;
     margin-top: 30px;
@@ -98,17 +112,23 @@ body{
 }
 
 .weather-box .description{
-    color: #06283d;
+    color: var(--pricipal-color);
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
 }
 
+
+
+
+
+/* weather details*/
+
 .weather-details{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+margin-top: 30px;
 }
 
 .weather-details .humidity, .weather-details .wind{
@@ -129,31 +149,43 @@ body{
 }
 
 .weather-details i{
-    color: #06283d;
+    color: var(--pricipal-color);
     font-size: 26px;
     margin-right: 10px;
     margin-top: 6px;
 }
 
 .weather-details span{
-    color: #06283d;
+    color: var(--pricipal-color);
     font-size: 22px;
     font-weight: 500;
 }
 
 .weather-details p{
-    color: #06283d;
+    color: var(--pricipal-color);
     font-size: 14px;
     font-weight: 500;
 }
 
+.weather-box, .weather-details{
+scale: 0;
+opacity: 0;
+}
+
+
+
+
+
+
+/* error 404 */
+
 .not-found{
-    width: 100%;
-    text-align: center;
-    margin-top: 50px;
-    scale:0;
-    opacity: 0;
-    display: none;
+width: 100%;
+text-align: center;
+margin-top: 50px;
+scale:0;
+opacity: 0;
+display: none;
 }
 
 .not-found img{
@@ -161,16 +193,17 @@ body{
 }
 
 .not-found p{
-    color: #06283d;
+    color: var(--pricipal-color);
     font-size: 22px;
     font-weight: 500;
     margin-top: 12px;
 }
 
-.weather-box, .weather-details{
-    scale: 0;
-    opacity: 0;
-}
+
+
+
+
+/*animation*/
 
 .fadeIn{
     animation: 0.5s fadeIn forwards;
